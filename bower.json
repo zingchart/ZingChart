@@ -1,0 +1,25 @@
+{
+    "name": "zingchart",
+    "version": "0.0.1",
+    "main": [
+        "src/zingchart-html-min.js"
+    ],
+    "homepage": "zingchart.com",
+    "description": "Repo to allow easy downloading of Zingchart via Bower.",
+    "ignore": [
+        ".bowerrc",
+        ".gitignore",
+        "bower.json",
+        "README.md"
+    ],
+    "keywords": [
+        "zingchart",
+        "chart",
+        "charting",
+        "javascript charts",
+        "html5 charts"
+    ],
+    "dependencies": {},
+    "devDependencies": {},
+    "private": false
+}

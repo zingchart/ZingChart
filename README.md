@@ -1,4 +1,4 @@
-## Bower-ZingChart
+## ZingChart-Bower
 
 ZingChart build 0.140806
 

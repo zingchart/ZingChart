@@ -1,6 +1,6 @@
 ## ZingChart-Bower
 
-ZingChart build 0.140806
+ZingChart build 0.141230
 
 
 Install [Zingchart](http://www.zingchart.com) with Bower:

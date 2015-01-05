@@ -11,7 +11,7 @@ bower install zingchart
 
 Include a reference to the zingchart script:
 ```
-<script src="bower_components/zingchart/src/zingchart-html5-min.js"></script>
+<script src="bower_components/zingchart/zingchart-html5-min.js"></script>
 ```
 
 

@@ -1,6 +1,6 @@
 {
     "name": "zingchart",
-    "version": "0.141230",
+    "version": "0.0.2",
     "main": [
         "zingchart-html5-min.js"
     ],

@@ -33,6 +33,12 @@ zingchart.render({
 </script>
 ```
 
+Package is also available using npm :
+
+```
+npm install zingchart
+```
+
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
 ##Package Directory

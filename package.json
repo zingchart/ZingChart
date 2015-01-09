@@ -1,0 +1,24 @@
+{
+  "name": "zingchart",
+  "version": "2.0.3",
+  "description": "A npm package for easy downloading of ZingChart.",
+  "main": "zingchart-html5-min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zingchart/ZingChart.git"
+  },
+  "keywords": [
+    "zingchart",
+    "chart",
+    "charting",
+    "javascript",
+    "charts",
+    "html5",
+    "charts"
+  ],
+  "author": "ZingChart",
+  "homepage": "https://github.com/zingchart/ZingChart"
+}

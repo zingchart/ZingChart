@@ -2,7 +2,6 @@
   "name": "zingchart",
   "version": "2.0.5",
   "description": "A npm package for easy downloading of ZingChart.",
-  "main": "zingchart.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

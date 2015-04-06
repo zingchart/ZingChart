@@ -1,5 +1,5 @@
 # [ZingChart](http://www.zingchart.com)
-Build v2.0.5
+Build v2.1.0
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
@@ -48,11 +48,9 @@ zingchart.render({
 The package includes the following:
 ```
 |   README.md
-|   zingchart.min.js
-├── modules
-│   ├── zingchart-3d.min.js
-│   ├── zingchart-animation.min.js
-│   ├── zingchart-api-annotations.min.js
+├── client
+│   ├── zingchart.min.js
+│   ├── modules
 ├── nodejs
 │   ├── zingchart-nodejs.min.js
 │   ├── modules-nodejs

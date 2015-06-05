@@ -32,7 +32,7 @@ var oDependencies = {
     'venn' : ['r']
 };
 
-var sBuild = fs.readFileSync('../modules/zingchart-core-min.js', 'utf8');
+var sBuild = fs.readFileSync('../client/modules/zingchart-core.min.js', 'utf8');
 
 //Obtain module list
 
@@ -78,7 +78,7 @@ var sModules = JSON.stringify({modules : aModules});
 //Read each file, and append it to the
 for(var file = 0; file< aModules.length; file++){
     try{
-        var sFile = fs.readFileSync('../modules/zingchart-'+aModules[file]+'.min.js', 'utf8');
+        var sFile = fs.readFileSync('../client/modules/zingchart-'+aModules[file]+'.min.js', 'utf8');
         var startPos = sFile.indexOf('*/');
         if(startPos > -1){
             //Extract file header comments

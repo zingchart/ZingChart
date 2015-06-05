@@ -1,6 +1,6 @@
 {
     "name": "zingchart",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "homepage": "http://www.zingchart.com",
     "description": "Repo to allow easy downloading of Zingchart via Bower.",
     "ignore": [

@@ -1,6 +1,6 @@
 {
   "name": "zingchart",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A npm package for easy downloading of ZingChart.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

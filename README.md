@@ -1,5 +1,5 @@
 # [ZingChart](http://www.zingchart.com)
-Build v2.1.0
+Build v2.1.1
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 

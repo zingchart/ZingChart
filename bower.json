@@ -1,14 +1,11 @@
 {
     "name": "zingchart",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "homepage": "http://www.zingchart.com",
     "description": "Repo to allow easy downloading of Zingchart via Bower.",
     "ignore": [
         ".bowerrc",
         ".gitignore",
-        "bower.json",
-        "phantomjs",
-        "nodejs",
         "package.json",
         "custom"
     ],

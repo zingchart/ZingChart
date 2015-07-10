@@ -1,4 +1,4 @@
-![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo.png)
+![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
 
 Build v2.1.2
 

@@ -1,5 +1,5 @@
 # [ZingChart](http://www.zingchart.com)
-Build v2.1.2
+Build v2.1.3
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
@@ -45,7 +45,7 @@ zingchart.render({
 ```
 
 ## Browserify
-This package supports the CommonJS module format to be used with bundlers such as [Browserify](http://browserify.org/) when being used with NPM. 
+This package supports the CommonJS module format to be used with bundlers such as [Browserify](http://browserify.org/) when being used with NPM.
 
 Usage : `var zingchart = require('zingchart');`
 
@@ -100,7 +100,7 @@ $ node build.js line pie
 
 ## Integrations
 
-ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion. 
+ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion.
 
 * [JQuery](https://github.com/zingchart/ZingChart-jQuery)
 * [AngularJS](https://github.com/zingchart/ZingChart-AngularJS)

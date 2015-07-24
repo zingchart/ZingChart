@@ -1,9 +1,9 @@
-# [ZingChart](http://www.zingchart.com)
-Build v2.1.3
-=======
-![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
-For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
+![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
+
+Build v2.1.3
+
+For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
 ## Install
 

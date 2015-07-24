@@ -1,6 +1,7 @@
 # [ZingChart](http://www.zingchart.com)
 Build v2.1.3
-
+=======
+![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
 
@@ -58,12 +59,6 @@ The package includes the following:
 ├── client
 │   ├── zingchart.min.js
 │   ├── modules
-├── nodejs
-│   ├── zingchart-nodejs.min.js
-│   ├── modules-nodejs
-├── phantomjs
-│   ├── zingchart-phantomjs.min.js
-│   ├── modules-phantomjs
 ├── custom
 │   ├── build.js
 |   ...

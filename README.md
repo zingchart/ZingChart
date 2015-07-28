@@ -101,3 +101,7 @@ ZingChart is wrapped in a variety of ways for easy consumption with popular JS l
 * [AngularJS](https://github.com/zingchart/ZingChart-AngularJS)
 * [Ember](https://github.com/zingchart/ember-zingchart)
 * [Backbone](https://github.com/zingchart/backbone-zingchart)
+
+## Contextual Demos
+
+We're always working on new demos to help users get started using ZingChart with their framework or database. Take a look at our [Demo repo](https://github.com/zingchart/ZingChart-Demos/) to see if we've covered your toolset. [Let us know](http://www.zingchart.com/support/) if we haven't or if you need help with an existing implementation.

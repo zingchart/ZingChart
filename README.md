@@ -1,9 +1,18 @@
 
 ![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
 
-Build v2.1.4
+Build v2.2.0
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
+
+```
+Note : The new default theme for v2.2.0 will break charts created using previous builds.
+A 'classic' theme is provided for backwards compatibility.
+The new theme can be set in three different ways:
+    1. Global (ex : zingchart.THEME = 'light';)
+    2. In the render object with the 'theme' parameter
+    3. In the chart object.
+```
 
 ## Install
 

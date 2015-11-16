@@ -1,7 +1,7 @@
 
 ![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
 
-Build v2.2.0
+Build v2.2.1
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 

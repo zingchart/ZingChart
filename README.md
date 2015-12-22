@@ -1,5 +1,4 @@
-
-![ScreenShot](https://github.com/zingchart/ZingChart/blob/assets/assets/zc-logo-small.png)
+# ZingChart
 
 Build v2.2.2
 

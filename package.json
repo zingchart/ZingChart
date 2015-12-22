@@ -1,6 +1,6 @@
 {
   "name": "zingchart",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A npm package for easy downloading of ZingChart.",
   "main" : "index.js",
   "scripts": {

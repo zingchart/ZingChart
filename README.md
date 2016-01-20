@@ -34,11 +34,11 @@ http://cdn.zingchart.com/zingchart.min.js
 ## Quick Start
 Include a reference to the zingchart library
 
-```
+```html
 <script src="zingchart.min.js"></script>
 ```
 The `zingchart` object is now accessible. Happy charting!
-```
+```html
 <div id="chart"></div>
 <script>
 window.onload = function() {
@@ -92,7 +92,7 @@ Both examples will provide the same functionality for the line/pie example.
 $ node build.js zingchart.cnf
 ```
 Inside `zingchart.cnf`:
-```
+```js
 {"modules":["line","pie"]}
 ```
 

@@ -30,6 +30,12 @@ npm install zingchart
 http://cdn.zingchart.com/zingchart.min.js
 ```
 
+#### *cdn on [cdnjs](https://cdnjs.com/libraries/zingchart)*
+```
+https://cdnjs.com/libraries/zingchart
+```
+
+
 
 ## Quick Start
 Include a reference to the zingchart library

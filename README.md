@@ -1,6 +1,6 @@
 # ZingChart
 
-Build v2.3.2
+Build v2.3.3
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
@@ -118,7 +118,7 @@ ZingChart is wrapped in a variety of ways for easy consumption with popular JS l
 
 ## Contextual Demos
 
-We're always working on new demos to help users get started using ZingChart with their framework or database. Take a look at our [Demo repo](https://github.com/zingchart/ZingChart-Demos/) to see if we've covered your toolset. [Let us know](http://www.zingchart.com/support/) if we haven't or if you need help with an existing implementation.
+We're always working on new demos to help users get started using ZingChart with their framework or database. Take a look at our [Demo repo](https://github.com/zingchart-demos) to see if we've covered your toolset. [Let us know](http://www.zingchart.com/support/) if we haven't or if you need help with an existing implementation.
 
 ## Support
 If you need any assistance or would like to report any bugs found in ZingChart, please contact us at support@zingchart.com or through our chat client on our website www.zingchart.com

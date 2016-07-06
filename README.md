@@ -1,6 +1,6 @@
 # ZingChart
 
-Build v2.3.3
+Build v2.4.0
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 

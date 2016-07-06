@@ -1,6 +1,6 @@
 # ZingChart
 
-Build v2.3.3
+Build v2.4.0
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 
@@ -111,8 +111,9 @@ $ node build.js line pie
 
 ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion.
 
-* [JQuery](https://github.com/zingchart/ZingChart-jQuery)
 * [AngularJS](https://github.com/zingchart/ZingChart-AngularJS)
+* [PHP](https://github.com/zingchart/ZingChart-PHP)
+* [JQuery](https://github.com/zingchart/ZingChart-jQuery)
 * [Ember](https://github.com/zingchart/ember-zingchart)
 * [Backbone](https://github.com/zingchart/backbone-zingchart)
 

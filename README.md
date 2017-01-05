@@ -1,4 +1,5 @@
-# ZingChart
+
+# [ZingChart](https://www.zingchart.com/)
 
 Build v2.5.2
 

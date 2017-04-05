@@ -1,18 +1,17 @@
-
 # [ZingChart](https://www.zingchart.com/)
 
 Build v2.6.0
 
-For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
+A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, JQuery, PHP, Ember, & Backbone. 
 
-```
-Note : The new default theme for v2.2.0 will break charts created using previous builds.
-A 'classic' theme is provided for backwards compatibility.
-The new theme can be set in three different ways:
-    1. Global (ex : zingchart.THEME = 'light';)
-    2. In the render object with the 'theme' parameter
-    3. In the chart object.
-```
+## Resources: 
+* [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-chart/)
+* [Docs](http://www.zingchart.com/docs) 
+* [API Docs](https://www.zingchart.com/docs/developers/api-events/)
+* [Demos Gallery](https://www.zingchart.com/gallery/) 
+* [Download](https://www.zingchart.com/try/)
+* [Support](https://help.zingchart.com/hc/en-us)
+* [Stack Overflow](http://stackoverflow.com/search?q=zingchart)
 
 ## Install
 

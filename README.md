@@ -1,7 +1,7 @@
 
 # [ZingChart](https://www.zingchart.com/)
 
-Build v2.5.2
+Build v2.6.0
 
 For more info on using ZingChart, see the docs: http://www.zingchart.com/docs
 

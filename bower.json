@@ -1,8 +1,8 @@
 {
     "name": "zingchart",
-    "version": "2.8.6",
+    "version": "2.8.7",
     "main": "client/zingchart.min.js",
-    "homepage": "http://www.zingchart.com",
+    "homepage": "https://www.zingchart.com",
     "description": "Repo to allow easy downloading of Zingchart via Bower.",
     "ignore": [
         ".bowerrc",

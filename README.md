@@ -7,7 +7,7 @@ A declarative, efficient, and simple JavaScript library for building responsive 
 ## Resources: 
 * [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-javascript-chart)
 * [Docs](http://www.zingchart.com/docs) 
-* [JSON DOCS] (https://www.zingchart.com/docs/api/json-configuration)
+* [JSON DOCS](https://www.zingchart.com/docs/api/json-configuration)
 * [API Events](https://www.zingchart.com/docs/events/all-events)
 * [API Methods](https://www.zingchart.com/docs/methods/all-methods)
 * [Demos Gallery](https://www.zingchart.com/gallery/) 

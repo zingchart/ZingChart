@@ -104,7 +104,7 @@ And if you have and modules you want to include you do the following
     import './zingchart/modules-es6/zingchart-pareto.min.js';
   </script>
   <!-- fallback for no module support -->
-  <script nomodule src="/zingchart/dist/client/zingchart.min.js"></script>
+  <script nomodule src="/zingchart/zingchart.min.js"></script>
 </head>
 <body>
   <!-- Chart Component [2] -->

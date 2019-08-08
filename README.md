@@ -1,17 +1,20 @@
 # [ZingChart](https://www.zingchart.com/)
 
-Build v2.8.6
+Build v2.8.7
 
-A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, JQuery, PHP, Ember, & Backbone. 
+A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, Vue, JQuery, PHP, Ember, & Backbone. 
 
 ## Resources: 
-* [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-chart/)
+* [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-javascript-chart)
 * [Docs](http://www.zingchart.com/docs) 
-* [API Docs](https://www.zingchart.com/docs/developers/api-events/)
+* [JSON DOCS] (https://www.zingchart.com/docs/api/json-configuration)
+* [API Events](https://www.zingchart.com/docs/events/all-events)
+* [API Methods](https://www.zingchart.com/docs/methods/all-methods)
 * [Demos Gallery](https://www.zingchart.com/gallery/) 
-* [Download](https://www.zingchart.com/try/)
-* [Support](https://help.zingchart.com/hc/en-us)
-* [Stack Overflow](http://stackoverflow.com/search?q=zingchart)
+* [Download](https://www.zingchart.com/download/)
+* [Support](https://www.zingchart.com/support)
+* [Stack Overflow](https://stackoverflow.com/search?q=zingchart)
+* [Studio](https://app.zingsoft.com)
 
 ## Install
 
@@ -27,7 +30,7 @@ npm install zingchart
 
 #### *cdn*
 ```
-http://cdn.zingchart.com/zingchart.min.js
+https://cdn.zingchart.com/zingchart.min.js
 ```
 
 #### *cdn on [cdnjs](https://cdnjs.com/libraries/zingchart)*
@@ -37,27 +40,103 @@ https://cdnjs.com/libraries/zingchart
 
 
 
-## Quick Start
+## Quick Start es5 
 Include a reference to the zingchart library
 
 ```html
-<script src="zingchart.min.js"></script>
-```
-The `zingchart` object is now accessible. Happy charting!
-```html
-<div id="chart"></div>
-<script>
-window.onload = function() {
-zingchart.render({
-    id: "chart",
-    data: {
-        type: "line",
-        series: [{ values: [5,10,15,5,10,5] }]
-    }
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Script Reference [1] -->
+  <script src="/zingchart/zingchart.min.js"></script>
+
+</head>
+<body>
+  <!--Chart Component [2] -->
+  <div id="myChart"></div>
+
+  <script>
+    let chartData = {
+      type: 'pareto',
+      series: [
+        {
+          values: [
+            4642,
+            4345,
+            2350,
+            1251
+          ]
+        }
+      ]
+    };
+
+    // Render Method[3]
+    zingchart.render({ 
+      id: 'myChart',
+      data: chartData,
+      height: 400,
+      width: '100%'
     });
-};
-</script>
+  </script>
+</body>
+</html>
 ```
+
+## Quick Start es6 Imports
+A general best practice to use ZingChart in any of your frameworks is used in the following:
+
+`import {zingchart, ZC} from 'zingchart/es6';`
+
+And if you have and modules you want to include you do the following
+
+`import {pareto} from 'zingchart/modules-es6/zingchart-pareto.min.js';`
+
+
+## Quick Start es6 w/Script Modules
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Library [1] -->
+  <script type="module">
+    import {zingchart, ZC} from './zingchart/es6.js';
+    import './zingchart/modules-es6/zingchart-pareto.min.js';
+  </script>
+  <!-- fallback for no module support -->
+  <script nomodule src="/zingchart/dist/client/zingchart.min.js"></script>
+</head>
+<body>
+  <!-- Chart Component [2] -->
+  <div id="myChart"></div>
+
+  <script>
+    let chartConfig = {
+      type: 'pareto',
+      series: [
+        {
+          values: [
+            4642,
+            4345,
+            2350,
+            1251
+          ]
+        }
+      ]
+    };
+
+    // Render Method[3]
+    zingchart.render({ 
+      id: 'myChart',
+      data: chartConfig,
+      height: 400,
+      width: '100%'
+    });
+  </script>
+</body>
+</html>
+```
+
 
 ## Browserify
 This package supports the CommonJS module format to be used with bundlers such as [Browserify](http://browserify.org/) when being used with NPM.
@@ -78,7 +157,7 @@ The package includes the following:
 |   ...
 ```
 
-## Custom Build
+<!--## Custom Build
 ***(requires Node.js)***
 
 The zingchart.min.js file in the root directory is a fully functional build which includes the majority of functionality within the library. If you wanted to slim down the library and only provide functionality that you need, we have included a build tool that allows you to create a custom library build for the client side version. The /modules folder contains a complete collection of dependencies for the zingchart library.
@@ -93,6 +172,7 @@ $ node build.js <configPath> <modules>
 
 Both examples will provide the same functionality for the line/pie example.
 
+
 #### Example 1
 ```
 $ node build.js zingchart.cnf
@@ -106,6 +186,8 @@ Inside `zingchart.cnf`:
 ```
 $ node build.js line pie
 ```
+-->
+
 
 ## Integrations
 

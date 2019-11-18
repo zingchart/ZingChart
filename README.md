@@ -1,6 +1,6 @@
 # [ZingChart](https://www.zingchart.com/)
 
-Build v2.8.7
+Build v2.8.8
 
 A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, Vue, JQuery, PHP, Ember, & Backbone. 
 

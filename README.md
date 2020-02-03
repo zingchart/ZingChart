@@ -2,6 +2,12 @@
 
 Build v2.8.8
 
+![](https://img.shields.io/npm/dw/zingchart)
+
+![](https://img.shields.io/david/zingchart/zingchart)
+![](https://img.shields.io/david/peer/zingchart/zingchart)
+![](https://img.shields.io/david/dev/zingchart/zingchart)
+
 A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, Vue, JQuery, PHP, Ember, & Backbone. 
 
 ## Resources: 

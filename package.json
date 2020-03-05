@@ -2,10 +2,10 @@
   "name": "zingchart",
   "version": "2.8.9",
   "description": "Our JavaScript charting library is a commercial product. But the full branded version is free to try, forever.",
-  "main" : "index.js",
-  "module" : "es6.js",
+  "main": "index.js",
+  "module": "es6.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish:nuget": "nuget-publish"
   },
   "repository": {
     "type": "git",
@@ -14,12 +14,16 @@
   "keywords": [
     "zingchart",
     "chart",
+    "charts",
     "charting",
     "javascript",
-    "charts",
+    "javascript charts",
     "html5",
-    "charts"
+    "interactive maps"
   ],
   "author": "ZingChart",
-  "homepage": "https://github.com/zingchart/ZingChart"
+  "homepage": "https://www.zingchart.com",
+  "devDependencies": {
+    "nuget-publish": "^1.0.3"
+  }
 }

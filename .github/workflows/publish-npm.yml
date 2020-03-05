@@ -1,0 +1,31 @@
+
+# Name is optional and if present must be used
+# in the url path for badges
+name: Publish to NPM
+
+# only run when a release has been "published"
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  # publish to npm on release
+  publish:
+    name: NPM Publish
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

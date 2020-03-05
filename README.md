@@ -18,25 +18,36 @@ Our JavaScript charting library is a commercial product. But the full branded ve
 
 We publish our live, dev and ALL previous builds on our CDN. This is the quickest way to get started.
 
-Live Version and Modules
+##### Live Version
+
+Live Version and Modules (https://cdn.zingchart.com/zingchart.min.js | https://cdn.zingchart.com/modules/)
+
 ```
 https://cdn.zingchart.com/zingchart.min.js
 https://cdn.zingchart.com/modules/
 ```
 
-ES6 Version and Modules
+##### ES6 Version
+
+ES6 Version and Modules (https://cdn.zingchart.com/zingchart-es6.min.js | https://cdn.zingchart.com/modules-es6/)
+
 ```
 https://cdn.zingchart.com/zingchart-es6.min.js
 https://cdn.zingchart.com/modules-es6/
 ```
+##### Previous Version
 
-Previous Version (2.8.8). You can view all files by visiting the version root directory [https://cdn.zingchart.com/2.8.8/](https://cdn.zingchart.com/2.8.8/)
+Previous Version v2.8.8 (https://cdn.zingchart.com/2.8.8)
+
 ```
 https://cdn.zingchart.com/2.8.8/zingchart.min.js
 https://cdn.zingchart.com/2.8.8/modules/
 ```
 
-Dev/Canary Version
+##### Dev/Canary Version
+
+Dev/Canary Version (https://cdn.zingchart.com/dev/zingchart.min.js | https://cdn.zingchart.com/dev/modules/)
+
 ```
 https://cdn.zingchart.com/dev/zingchart.min.js
 https://cdn.zingchart.com/dev/modules/
@@ -48,34 +59,49 @@ We have a variety of package managers to download our library, as well as integr
 
 
 #### *npm*
+
 ```
 npm install zingchart
 ```
 
-### Integrations
+#### nuget
+
+If you are looking for the ZingChart package and are a .NET user go to [nuget package here](https://www.nuget.org/packages/ZingChart/).
+
+```
+Install-Package ZingChart -Version 2.5.0
+```
+
+#### Integrations
+
 Installing our integration packages will also install the library for you. ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion.
 
-Angular
+##### Angular
+
 ```
 npm install zingchart-angular
 ```
 
-React
+##### React
+
 ```
 npm install zingchart-react
 ```
 
-Vue
+##### Vue
+
 ```
 npm install zingchart-react
 ```
 
-Web Component
+##### Web Component
+
 ``` 
 npm install zingchart-web-component
 ```
 
-AngularJS
+##### AngularJS
+
 ```
 npm install zingchart-angularjs
 ```

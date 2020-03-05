@@ -1,50 +1,95 @@
 # [ZingChart](https://www.zingchart.com/)
 
-Build v2.8.8
+Our JavaScript charting library is a commercial product. But the full branded version is free to try, forever.
 
+![npm](https://img.shields.io/npm/v/zingchart)
 ![](https://img.shields.io/npm/dw/zingchart)
 
 ![](https://img.shields.io/david/zingchart/zingchart)
 ![](https://img.shields.io/david/peer/zingchart/zingchart)
 ![](https://img.shields.io/david/dev/zingchart/zingchart)
 
-A declarative, efficient, and simple JavaScript library for building responsive charts. With integrations in Angular, React, Vue, JQuery, PHP, Ember, & Backbone. 
-
-## Resources: 
-* [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-javascript-chart)
-* [Docs](http://www.zingchart.com/docs) 
-* [JSON DOCS](https://www.zingchart.com/docs/api/json-configuration)
-* [API Events](https://www.zingchart.com/docs/events/all-events)
-* [API Methods](https://www.zingchart.com/docs/methods/all-methods)
-* [Demos Gallery](https://www.zingchart.com/gallery/) 
-* [Download](https://www.zingchart.com/download/)
-* [Support](https://www.zingchart.com/support)
-* [Stack Overflow](https://stackoverflow.com/search?q=zingchart)
-* [Studio](https://app.zingsoft.com)
+![](https://d2ddoduugvun08.cloudfront.net/items/0h0Z183K27213h0H0x1n/Screen%20Recording%202020-03-05%20at%2001.45%20PM.gif)
 
 ## Install
 
-#### *bower*
+
+### *CDN*
+
+We publish our live, dev and ALL previous builds on our CDN. This is the quickest way to get started.
+
+Live Version and Modules
 ```
-bower install zingchart
+https://cdn.zingchart.com/zingchart.min.js
+https://cdn.zingchart.com/modules/
 ```
+
+ES6 Version and Modules
+```
+https://cdn.zingchart.com/zingchart-es6.min.js
+https://cdn.zingchart.com/modules-es6/
+```
+
+Previous Version (2.8.8). You can view all files by visiting the version root directory [https://cdn.zingchart.com/2.8.8/](https://cdn.zingchart.com/2.8.8/)
+```
+https://cdn.zingchart.com/2.8.8/zingchart.min.js
+https://cdn.zingchart.com/2.8.8/modules/
+```
+
+Dev/Canary Version
+```
+https://cdn.zingchart.com/dev/zingchart.min.js
+https://cdn.zingchart.com/dev/modules/
+```
+
+### Package Managers
+
+We have a variety of package managers to download our library, as well as integrations
+
 
 #### *npm*
 ```
 npm install zingchart
 ```
 
-#### *cdn*
+### Integrations
+Installing our integration packages will also install the library for you. ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion.
+
+Angular
 ```
-https://cdn.zingchart.com/zingchart.min.js
+npm install zingchart-angular
 ```
 
-#### *cdn on [cdnjs](https://cdnjs.com/libraries/zingchart)*
+React
 ```
-https://cdnjs.com/libraries/zingchart
+npm install zingchart-react
 ```
 
+Vue
+```
+npm install zingchart-react
+```
 
+Web Component
+``` 
+npm install zingchart-web-component
+```
+
+AngularJS
+```
+npm install zingchart-angularjs
+```
+
+List of integrations:
+* [Angular](https://github.com/zingchart/zingchart-angular)
+* [React](https://github.com/zingchart/zingchart-react)
+* [Vue](https://github.com/zingchart/zingchart-vue)
+* [WebComponent](https://github.com/zingchart/zingchart-web-component)
+* [JQuery](https://github.com/zingchart/ZingChart-jQuery)
+* [PHP](https://github.com/zingchart/ZingChart-PHP)
+* [AngularJS](https://github.com/zingchart/ZingChart-AngularJS)
+* [Ember](https://github.com/zingchart/ember-zingchart)
+* [Backbone](https://github.com/zingchart/backbone-zingchart)
 
 ## Quick Start es5 
 Include a reference to the zingchart library
@@ -143,8 +188,20 @@ And if you have and modules you want to include you do the following
 </html>
 ```
 
+## Resources: 
+* [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-javascript-chart)
+* [Docs](http://www.zingchart.com/docs) 
+* [JSON Docs](https://www.zingchart.com/docs/api/json-configuration)
+* [API Events](https://www.zingchart.com/docs/events/all-events)
+* [API Methods](https://www.zingchart.com/docs/methods/all-methods)
+* [Gallery](https://www.zingchart.com/gallery/) 
+* [Download](https://www.zingchart.com/download/)
+* [Support](https://www.zingchart.com/support)
+* [Stack Overflow](https://stackoverflow.com/search?q=zingchart)
+* [Studio](https://app.zingsoft.com)
 
-## Browserify
+
+<!-- ## Browserify
 This package supports the CommonJS module format to be used with bundlers such as [Browserify](http://browserify.org/) when being used with NPM.
 
 Usage : `var zingchart = require('zingchart');`
@@ -161,53 +218,8 @@ The package includes the following:
 ├── custom
 │   ├── build.js
 |   ...
-```
+``` -->
 
-<!--## Custom Build
-***(requires Node.js)***
-
-The zingchart.min.js file in the root directory is a fully functional build which includes the majority of functionality within the library. If you wanted to slim down the library and only provide functionality that you need, we have included a build tool that allows you to create a custom library build for the client side version. The /modules folder contains a complete collection of dependencies for the zingchart library.
-
-For example, if you wanted to create a build that only contained functionality for line and pie charts, you would run the command
-
-```
-$ node build.js <configPath> <modules>
-```
-* `configPath` (optional) - The path to the .cnf file to provide module options
-* `modules` (optional) -The module arguments to provide the build tool without using a .cnf file.
-
-Both examples will provide the same functionality for the line/pie example.
-
-
-#### Example 1
-```
-$ node build.js zingchart.cnf
-```
-Inside `zingchart.cnf`:
-```js
-{"modules":["line","pie"]}
-```
-
-#### Example 2
-```
-$ node build.js line pie
-```
--->
-
-
-## Integrations
-
-ZingChart is wrapped in a variety of ways for easy consumption with popular JS libraries and frameworks. Official releases are shown here.  If you have a third party integration please contact us for inclusion.
-
-* [JQuery](https://github.com/zingchart/ZingChart-jQuery)
-* [PHP](https://github.com/zingchart/ZingChart-PHP)
-* [AngularJS](https://github.com/zingchart/ZingChart-AngularJS)
-* [Ember](https://github.com/zingchart/ember-zingchart)
-* [Backbone](https://github.com/zingchart/backbone-zingchart)
-
-## Contextual Demos
-
-We're always working on new demos to help users get started using ZingChart with their framework or database. Take a look at our [Demo repo](https://github.com/zingchart-demos) to see if we've covered your toolset. [Let us know](http://www.zingchart.com/support/) if we haven't or if you need help with an existing implementation.
 
 ## Support
 If you need any assistance or would like to report any bugs found in ZingChart, please contact us at support@zingchart.com or through our chat client on our website www.zingchart.com

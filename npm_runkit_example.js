@@ -1,2 +1,2 @@
 /* import ZingChart globally exposed variables */
-import {zingchart, ZC} from 'zingchart/es6';
+var zingchart = require('./server/zingchart-nodejs.min.js');

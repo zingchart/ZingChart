@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Pack nuget Package
-        run: nuget pack package.nuspec
+      # - name: Pack nuget Package
+      #   run: nuget pack package.nuspec
       - name: Push package to nuget
         run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org.v3/index.json

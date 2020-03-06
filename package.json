@@ -22,8 +22,5 @@
     "interactive maps"
   ],
   "author": "ZingChart",
-  "homepage": "https://www.zingchart.com",
-  "devDependencies": {
-    "nuget-publish": "^1.0.3"
-  }
+  "homepage": "https://www.zingchart.com"
 }

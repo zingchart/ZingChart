@@ -5,8 +5,9 @@ name: Publish to Nuget
 
 # only run when a release has been "published"
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+    - dev 
 
 jobs:
 

@@ -10,6 +10,7 @@ Thumbs.db
 
 # Directories
 node_modules/
+build/
 
 # Generated Files
 *.nupkg

@@ -7,7 +7,7 @@ name: Publish to Nuget
 on:
   push:
     branches:
-    - dev 
+    - test 
 
 jobs:
 

@@ -21,6 +21,8 @@ jobs:
 
     steps: 
       - uses: actions/checkout@v1
+      - name: Install nuget
+        run:  apt-get update -y &&  apt-get install -y nuget
       - name: Pack nuget Package
         run: npm run build:nuget
       - name: Push package to nuget

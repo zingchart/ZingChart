@@ -19,7 +19,7 @@ jobs:
       matrix:
         node-version: [12]
 
-    steps:
+    steps: 
       - uses: actions/checkout@v1
       - name: Pack nuget Package
         run: npm run build:nuget

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>zingchart</id>
-        <version>2.9.0</version>
+        <version>2.9.1</version>
         <description>Our JavaScript charting library is a commercial product. But the full branded version is free to try, forever.</description>
         <authors>ZingSoft Inc</authors>
         <projectUrl>https://www.zingchart.com</projectUrl>

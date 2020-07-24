@@ -13,8 +13,5 @@
     <files>
         <file src="zingchart.min.js" target="content/Scripts"/>
         <file src="modules/" target="content/Scripts"/>
-        <file src="zingchart-es6.min.js" target="content/Scripts"/>
-        <file src="modules-es6/" target="content/Scripts"/>
-        <!-- <file src="server/" target="content/Scripts"/> -->
     </files>
 </package>

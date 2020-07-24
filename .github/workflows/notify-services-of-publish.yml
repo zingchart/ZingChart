@@ -5,8 +5,9 @@ name: Trigger Site and CDN Build
 
 # only run when a release has been "published"
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - test-ci
 
 jobs:
   dispatch:

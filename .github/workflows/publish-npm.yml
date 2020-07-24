@@ -5,9 +5,8 @@ name: Publish to NPM
 
 # only run when a release has been "published"
 on:
-  push:
-    branches:
-      - test-ci
+  release:
+    types: [published]
 
 jobs:
 

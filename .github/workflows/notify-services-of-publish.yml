@@ -1,0 +1,37 @@
+  
+# Name is optional and if present must be used
+# in the url path for badges
+name: Trigger Site and CDN Build
+
+# only run when a release has been "published"
+on:
+  release:
+    types: [published]
+
+jobs:
+  dispatch:
+    name: Dispatch Event
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.5]
+
+    steps:
+    # push dev (stage) version of site
+    - name: Dispatch Site Build
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        # personal access tokens are under admin@zingsoft.com github account
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        repository: zingsoftinc/zingchart-com
+        event-type: new-zc-version
+        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+    # push master (live) branch of site
+    - name: Dispatch CDN Build
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        # personal access tokens are under admin@zingsoft.com  github account
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        repository: zingsoftinc/zingchart-cdn
+        event-type: new-zc-version
+        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

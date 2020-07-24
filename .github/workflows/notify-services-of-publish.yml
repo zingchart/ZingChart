@@ -35,4 +35,4 @@ jobs:
         token: ${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}
         repository: zingsoftinc/zingchart-cdn
         event-type: new-zc-version
-        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+        client-payload: '{"ref": "${{ github.ref }}", "version": "${GITHUB_REF/refs\/tags\//}", "date": "July 25, 2020"}'

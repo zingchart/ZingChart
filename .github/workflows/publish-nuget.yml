@@ -5,9 +5,9 @@ name: Publish to Nuget
 
 # only run when a release has been "published"
 on:
-  push:
-    branches:
-    - test 
+  release:
+    types: [published]
+
 
 jobs:
 
@@ -19,9 +19,12 @@ jobs:
       matrix:
         node-version: [12]
 
-    steps:
+    steps: 
       - uses: actions/checkout@v1
+      - name: Install nuget
+        run:  sudo apt-get update -y &&  sudo apt-get install -y nuget
       - name: Pack nuget Package
         run: npm run build:nuget
+      # More info on dotnet nuget push here -> https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
       - name: Push package to nuget
-        run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org.v3/index.json
+        run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json

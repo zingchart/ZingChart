@@ -1,0 +1,106 @@
+
+# Name is optional and if present must be used
+# in the url path for badges
+name: Create Tag
+
+# ONLY triggers on create-external-release trigger and 
+# is meant to start a new tag and update version after that
+# https://docs.github.com/en/actions/reference/events-that-trigger-workflows#repository_dispatch
+# Sent from: https://github.com/marketplace/actions/repository-dispatch
+on: 
+  repository_dispatch:
+    types: [create-external-release]
+
+jobs:
+
+  # publish to npm on release
+  # Create release action docs -> https://github.com/actions/create-release
+  create-tag-branch:
+    name: Create External Tag Branch
+    if: github.event.client_payload.prerelease == true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.15]
+    steps:
+      - name: Checkout Public ZingChart Repository
+        uses: actions/checkout@v2
+      # https://github.com/marketplace/actions/create-branch
+      - name: Create Branch for tag
+        uses: peterjgrainger/action-create-branch@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        with:
+          branch: 'canary/${{ github.event.client_payload.version }}'
+
+  create-external-release:
+    name: Create External Tag
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.15]
+    steps:
+      # https://github.com/actions/checkout#checkout-a-different-branch
+      - name: Checkout Public ZingChart Canary Branch 
+        if: github.event.client_payload.prerelease == true
+        uses: actions/checkout@v2
+        with: 
+          ref: 'canary/${{ github.event.client_payload.version }}'
+      - name: Checkout Public ZingChart Repository
+        if: github.event.client_payload.prerelease == false
+        uses: actions/checkout@v2    
+      # https://github.com/actions/create-release
+      - name: Create Public Prerelease 
+        if: github.event.client_payload.prerelease == true
+        id: create_prerelease
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        # context of environment variables
+        with:
+          tag_name: ${{ github.event.client_payload.version }}
+          release_name: v${{ github.event.client_payload.version }}
+          # Target Commish Defined here: https://developer.github.com/v3/repos/releases/#create-a-release
+          commitish: 'canary/${{ github.event.client_payload.version }}'
+          body: |
+            // @todo REPLACE ME            
+            ## Features
+            - xxxx`type: "bar"`
+
+            ## Notable Fixes
+            - IOS device multiple resize events firing causing performance issues
+              
+            ## New Documentation 
+            - [ZingChart Docs](https://www.zingchart.com/docs)
+          # draft true by default so it doesn't trigger the build directly
+          # needs human review
+          draft: true
+          # public release by default. Make prerelease if you want to deploy a canary version of lib
+          prerelease: true
+      - name: Create Public Release 
+        if: github.event.client_payload.prerelease == false
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        # context of environment variables
+        with:
+          tag_name: ${{ github.event.client_payload.version }}
+          release_name: v${{ github.event.client_payload.version }}
+          # Target Commish Defined here: https://developer.github.com/v3/repos/releases/#create-a-release
+          commitish: 'master'
+          body: |
+            // @todo REPLACE ME            
+            ## Features
+            - xxxx`type: "bar"`
+
+            ## Notable Fixes
+            - IOS device multiple resize events firing causing performance issues
+              
+            ## New Documentation 
+            - [ZingChart Docs](https://www.zingchart.com/docs)
+          # draft true by default so it doesn't trigger the build directly
+          # needs human review
+          draft: true
+          # public release by default. Make prerelease if you want to deploy a canary version of lib
+          prerelease: false

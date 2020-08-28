@@ -66,20 +66,21 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-  publish-nuget:
-    name: Nuget Publish
-    needs: publish-npm
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12]
+  # publish-nuget:
+  #   name: Nuget Publish
+  #   needs: publish-npm
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [12]
 
-    steps: 
-      - uses: actions/checkout@v1
-      - name: Install nuget
-        run:  sudo apt-get update -y &&  sudo apt-get install -y nuget
-      - name: Pack nuget Package
-        run: npm run build:nuget
-      # More info on dotnet nuget push here -> https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
-      - name: Push package to nuget
-        run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
+  #   steps: 
+  #     - uses: actions/checkout@v1
+  #     - name: Install nuget
+  #       run:  sudo apt-get update -y &&  sudo apt-get install -y nuget
+  #     - name: Pack nuget Package
+  #       run: npm run build:nuget
+  #     # More info on dotnet nuget push here -> https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
+  # @todo dotnet nuget push broken in CI
+  #     - name: Push package to nuget
+  #       run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json

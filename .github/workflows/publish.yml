@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "admin@zingsoft.com"
           git config --local user.name "ZingSoft Admin"
           npm version ${ZC_VERSION}
-          git push https://zingsoftadmin:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git HEAD:master --force
+          git push https://zingsoftadmin:${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git HEAD:master --force
       - name: Update Package.json Version Canary
         if: github.event.release.prerelease == true
         # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#create
@@ -54,7 +54,7 @@ jobs:
           git config --local user.email "admin@zingsoft.com"
           git config --local user.name "ZingSoft Admin"
           npm version ${ZC_VERSION}
-          git push https://zingsoftadmin:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git
+          git push https://zingsoftadmin:${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git
       - name: Publish Canary TagTo NPM
         if: github.event.release.prerelease == true
         run: npm publish --tag canary --access public

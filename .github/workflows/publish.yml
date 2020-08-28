@@ -1,0 +1,85 @@
+
+# Name is optional and if present must be used
+# in the url path for badges
+name: Publish Live to NPM
+
+# only run when a release has been "published"
+# https://docs.github.com/en/actions/reference/events-that-trigger-workflows#release
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  # publish to npm on release
+  publish-npm:
+    name: NPM Publish
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12]
+ 
+    steps:
+      - name: Set Tag Version ENV Variable
+        run: echo ::set-env name=ZC_VERSION::${GITHUB_REF/refs\/tags\//}
+      - name: Checkout Repository 
+        if: github.event.release.prerelease == false
+        uses: actions/checkout@v1
+        with:
+          ref: refs/heads/master
+      - name: Checkout Repository Tag Branch
+        if: github.event.release.prerelease == true
+        uses: actions/checkout@v1
+        with:
+          ref: 'canary/${{ env.ZC_VERSION }}'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+      - name: Update Package.json Version
+        if: github.event.release.prerelease == false
+        # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#create
+        # git commit implicitly called by npm version
+        run: |
+          git config --local user.email "admin@zingsoft.com"
+          git config --local user.name "ZingSoft Admin"
+          npm version ${ZC_VERSION}
+          git push https://zingsoftadmin:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git HEAD:master --force
+      - name: Update Package.json Version Canary
+        if: github.event.release.prerelease == true
+        # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#create
+        # git commit implicitly called by npm version
+        run: |
+          git config --local user.email "admin@zingsoft.com"
+          git config --local user.name "ZingSoft Admin"
+          npm version ${ZC_VERSION}
+          git push https://zingsoftadmin:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git
+      - name: Publish Canary TagTo NPM
+        if: github.event.release.prerelease == true
+        run: npm publish --tag canary --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Publish To NPM
+        if: github.event.release.prerelease == false
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-nuget:
+    name: Nuget Publish
+    needs: publish-npm
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12]
+
+    steps: 
+      - uses: actions/checkout@v1
+      - name: Install nuget
+        run:  sudo apt-get update -y &&  sudo apt-get install -y nuget
+      - name: Pack nuget Package
+        run: npm run build:nuget
+      # More info on dotnet nuget push here -> https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-push
+      - name: Push package to nuget
+        run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json

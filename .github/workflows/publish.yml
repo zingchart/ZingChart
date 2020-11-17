@@ -21,7 +21,7 @@ jobs:
  
     steps:
       - name: Set Tag Version ENV Variable
-        run: echo ::set-env name=ZC_VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo "ZC_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Checkout Repository 
         if: github.event.release.prerelease == false
         uses: actions/checkout@v1

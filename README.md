@@ -162,7 +162,7 @@ Include a reference to the zingchart library
 ## Quick Start es6 Imports
 A general best practice to use ZingChart in any of your frameworks is used in the following:
 
-`import {zingchart, ZC} from 'zingchart/es6';`
+`import {zingchart, ZC} from 'zingchart/zingchart-es6';`
 
 And if you have and modules you want to include you do the following
 
@@ -175,11 +175,6 @@ And if you have and modules you want to include you do the following
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Import Library [1] -->
-  <script type="module">
-    import {zingchart, ZC} from './zingchart/es6.js';
-    import './zingchart/modules-es6/zingchart-pareto.min.js';
-  </script>
   <!-- fallback for no module support -->
   <script nomodule src="/zingchart/zingchart.min.js"></script>
 </head>
@@ -187,7 +182,11 @@ And if you have and modules you want to include you do the following
   <!-- Chart Component [2] -->
   <div id="myChart"></div>
 
-  <script>
+  <script type="module">
+    
+    import {zingchart, ZC} from './zingchart/zingchart-es6.js';
+    import './zingchart/modules-es6/zingchart-pareto.min.js';
+    
     let chartConfig = {
       type: 'pareto',
       series: [

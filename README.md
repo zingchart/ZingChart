@@ -75,7 +75,7 @@ npm install zingchart-react
 ##### Vue
 
 ```
-npm install zingchart-react
+npm install zingchart-vue
 ```
 
 ##### Web Component

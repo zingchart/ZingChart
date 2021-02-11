@@ -18,9 +18,9 @@ Our JavaScript charting library is a commercial product. But the full branded ve
 
 We publish our live, dev and ALL previous builds on our CDN. This is the quickest way to get started.
 
-##### Live Version
+##### Current Version
 
-Live Version and Modules (https://cdn.zingchart.com/zingchart.min.js | https://cdn.zingchart.com/modules/)
+Current Version and Modules (https://cdn.zingchart.com/zingchart.min.js | https://cdn.zingchart.com/modules/)
 
 ```
 https://cdn.zingchart.com/zingchart.min.js
@@ -35,23 +35,7 @@ ES6 Version and Modules (https://cdn.zingchart.com/zingchart-es6.min.js | https:
 https://cdn.zingchart.com/zingchart-es6.min.js
 https://cdn.zingchart.com/modules-es6/
 ```
-##### Previous Version
 
-Previous Version v2.8.8 (https://cdn.zingchart.com/2.8.8)
-
-```
-https://cdn.zingchart.com/2.8.8/zingchart.min.js
-https://cdn.zingchart.com/2.8.8/modules/
-```
-
-##### Dev/Canary Version
-
-Dev/Canary Version (https://cdn.zingchart.com/dev/zingchart.min.js | https://cdn.zingchart.com/dev/modules/)
-
-```
-https://cdn.zingchart.com/dev/zingchart.min.js
-https://cdn.zingchart.com/dev/modules/
-```
 
 ### Package Managers
 
@@ -217,8 +201,8 @@ And if you have and modules you want to include you do the following
 * [Getting Started Guide](https://www.zingchart.com/docs/getting-started/your-first-javascript-chart)
 * [Docs](http://www.zingchart.com/docs) 
 * [JSON Docs](https://www.zingchart.com/docs/api/json-configuration)
-* [API Events](https://www.zingchart.com/docs/events/all-events)
-* [API Methods](https://www.zingchart.com/docs/methods/all-methods)
+* [API Events](https://www.zingchart.com/docs/api/events)
+* [API Methods](https://www.zingchart.com/docs/api/methods)
 * [Gallery](https://www.zingchart.com/gallery/) 
 * [Download](https://www.zingchart.com/download/)
 * [Support](https://www.zingchart.com/support)
@@ -237,12 +221,14 @@ Usage : `var zingchart = require('zingchart');`
 The package includes the following:
 ```
 |   README.md
-├── client
-│   ├── zingchart.min.js
-│   ├── modules
-├── custom
-│   ├── build.js
-|   ...
+|   zingchart.min.js
+|   zingchart-es6.min.js
+├── modules
+|   ├── zingchart-3d.min.js
+|   ├── ...
+├── modules-es6
+|   ├── zingchart-3d.min.js
+|   ├── ...
 ``` -->
 
 

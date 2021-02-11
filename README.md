@@ -214,7 +214,7 @@ And if you have and modules you want to include you do the following
 This package supports the CommonJS module format to be used with bundlers such as [Browserify](http://browserify.org/) when being used with NPM.
 
 Usage : `var zingchart = require('zingchart');`
-
+-->
 
 
 ## Package Directory
@@ -229,7 +229,7 @@ The package includes the following:
 ├── modules-es6
 |   ├── zingchart-3d.min.js
 |   ├── ...
-``` -->
+``` 
 
 
 ## Support

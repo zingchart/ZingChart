@@ -7,7 +7,9 @@ name: Create Tag
 # is meant to start a new tag and update version after that
 # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#repository_dispatch
 # Sent from: https://github.com/marketplace/actions/repository-dispatch
-on: [workflow_dispatch]
+on: 
+  repository_dispatch:
+    types: [create-external-release]
 
 jobs:
 

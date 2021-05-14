@@ -42,7 +42,7 @@ jobs:
       - name: Twitter Notification
         uses: ethomson/send-tweet-action@v1
         with:
-          status: "New Release! ZingChart v${{ GITHUB_REF/refs\/tags\// }} has been released. Check out the new features at github.com\/zingchart\/ZingChart\/releases"
+          status: "New Release! Check out the new features at github.com\/zingchart\/ZingChart\/releases"
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}

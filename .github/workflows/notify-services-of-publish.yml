@@ -36,17 +36,17 @@ jobs:
     #     event-type: new-zg-version
     #     client-payload: '{"ref": "${{ github.ref }}", "version": "${GITHUB_REF/refs\/tags\//}"}'
 
-  tweet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Twitter Notification
-        uses: ethomson/send-tweet-action@v1
-        with:
-          status: "New Release! Check out the new features at github.com\/zingchart\/ZingChart\/releases"
-          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
-          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+     # tweet:
+     #   runs-on: ubuntu-latest
+     #   steps:
+     #     - name: Twitter Notification
+     #       uses: ethomson/send-tweet-action@v1
+     #       with:
+     #         status: "New Release! Check out the new features at github.com\/zingchart\/ZingChart\/releases"
+     #         consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+     #         consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+     #         access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+     #         access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
 
   slackNotification:
     name: Slack Notification

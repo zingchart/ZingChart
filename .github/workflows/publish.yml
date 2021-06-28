@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --local user.email "admin@zingsoft.com"
           git config --local user.name "ZingSoft Admin"
-          npm version ${ZC_VERSION}
+          npm version --allow-same-version  ${{ env.ZC_VERSION }}
           git push https://zingsoftadmin:${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git HEAD:master --force
       - name: Update Package.json Version Canary
         if: github.event.release.prerelease == true
@@ -53,7 +53,7 @@ jobs:
         run: |
           git config --local user.email "admin@zingsoft.com"
           git config --local user.name "ZingSoft Admin"
-          npm version --allow-same-version ${ZC_VERSION}
+          npm version --allow-same-version ${{ env.ZC_VERSION }}
           git push https://zingsoftadmin:${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}@github.com/zingchart/zingchart.git
       - name: Publish Canary TagTo NPM
         if: github.event.release.prerelease == true

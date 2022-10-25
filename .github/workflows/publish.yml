@@ -17,23 +17,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12]
+        node-version: [16.14]
  
     steps:
       - name: Set Tag Version ENV Variable
         run: echo "ZC_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Checkout Repository 
         if: github.event.release.prerelease == false
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
         with:
           ref: refs/heads/master
       - name: Checkout Repository Tag Branch
         if: github.event.release.prerelease == true
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
         with:
           ref: 'canary/${{ env.ZC_VERSION }}'
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org/
@@ -75,7 +75,7 @@ jobs:
   #       node-version: [12]
 
   #   steps: 
-  #     - uses: actions/checkout@v1
+  #     - uses: actions/checkout@v3
   #     - name: Install nuget
   #       run:  sudo apt-get update -y &&  sudo apt-get install -y nuget
   #     - name: Pack nuget Package

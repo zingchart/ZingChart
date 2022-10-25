@@ -21,13 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.15]
+        node-version: [16.14]
     steps:
       - name: Checkout Public ZingChart Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # https://github.com/marketplace/actions/create-branch
       - name: Create Branch for tag
-        uses: peterjgrainger/action-create-branch@v1.0.0
+        uses: peterjgrainger/action-create-branch@v2.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}
         with:
@@ -38,30 +38,30 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.15]
+        node-version: [16.14]
     steps:
       # https://github.com/actions/checkout#checkout-a-different-branch
       - name: Checkout Public ZingChart Canary Branch 
         if: github.event.client_payload.prerelease == true
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with: 
           ref: 'canary/${{ github.event.client_payload.version }}'
       - name: Checkout Public ZingChart Repository
         if: github.event.client_payload.prerelease == false
-        uses: actions/checkout@v2    
+        uses: actions/checkout@v3    
       # https://github.com/actions/create-release
       - name: Create Public Prerelease 
         if: github.event.client_payload.prerelease == true
         id: create_prerelease
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         # context of environment variables
         with:
           tag_name: ${{ github.event.client_payload.version }}
-          release_name: v${{ github.event.client_payload.version }}
+          name: v${{ github.event.client_payload.version }}
           # Target Commish Defined here: https://developer.github.com/v3/repos/releases/#create-a-release
-          commitish: 'canary/${{ github.event.client_payload.version }}'
+          target_commitish: 'canary/${{ github.event.client_payload.version }}'
           body: |
             // @todo REPLACE ME            
             ## Features
@@ -80,15 +80,15 @@ jobs:
       - name: Create Public Release 
         if: github.event.client_payload.prerelease == false
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         # context of environment variables
         with:
           tag_name: ${{ github.event.client_payload.version }}
-          release_name: v${{ github.event.client_payload.version }}
+          name: v${{ github.event.client_payload.version }}
           # Target Commish Defined here: https://developer.github.com/v3/repos/releases/#create-a-release
-          commitish: 'master'
+          target_commitish: 'master'
           body: |
             // @todo REPLACE ME            
             ## Features

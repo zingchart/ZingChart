@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.5]
+        node-version: [16.5]
 
     steps:
     # push dev (stage) version of site
     - name: Dispatch Site Build
-      uses: peter-evans/repository-dispatch@v1
+      uses: peter-evans/repository-dispatch@v2
       with:
         # personal access tokens are under admin@zingsoft.com github account
         token: ${{ secrets.ZINGSOFT_REPOS_PERSONAL_ACCESS_TOKEN }}
@@ -52,7 +52,7 @@ jobs:
   #   name: Slack Notification
   #   runs-on: ubuntu-latest
   #   steps:
-  #   - uses: actions/checkout@v2
+  #   - uses: actions/checkout@v3
   #   - name: Slack Notification
   #     uses: rtCamp/action-slack-notify@v2
   #     env:

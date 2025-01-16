@@ -1,6 +1,6 @@
 {
   "name": "zingchart",
-  "version": "2.9.16-hf1",
+  "version": "2.9.16-1",
   "description": "Our JavaScript charting library is a commercial product. But the full branded version is free to try, forever.",
   "main": "index.js",
   "module": "es6.js",
